@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico">
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -23,18 +24,32 @@
         <![endif]-->
 
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>jQuery</li>
-            <li>Backbone.js</li>
-            <li>Underscore.js</li>
-            <li>Modernizr</li>
-            <li>RequireJS</li>
-          </ul>
+        <div id="todoapp">
+            <header>
+                <h1>Todos</h1>
+                <input id="new-todo" type="text" placeholder="What needs to be done?">
+            </header>
+
+            <section id="main">
+                <input id="toggle-all" type="checkbox">
+                <label for="toggle-all">Mark all as complete</label>
+                <ul id="todo-list"></ul>
+            </section>
+
+            <footer id="footer">
+                <a id="clear-completed">Clear completed</a>
+                <div id="todo-count"></div>
+            </footer>
         </div>
+
+        <div id="instructions">
+            Double-click to edit a todo.
+        </div>
+
+        <div id="credits">
+            Created by <a href="http://es.linkedin.com/in/juanchaur/">Juan Chaur</a>.
+        </div>
+
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -49,6 +64,15 @@
 
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <!-- Templates -->
+
+        <script type="text/template" id="item-template">
+
+        </script>
+
+        <script type="text/template" id="stats-template">
+
+        </script>
         <!-- endbuild -->
 </body>
 </html>
